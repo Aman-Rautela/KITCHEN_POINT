@@ -1,0 +1,164 @@
+.overallContainer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 180px;
+  padding: 0 50px;
+}
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.leftContainer {
+  margin: 20px 0;
+  order: 2;
+  width: 100%;
+}
+.rightContainer {
+  order: 1;
+  width: 100%;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.p {
+  font-weight: 300;
+  width: 90%;
+}
+
+.mealWrapper {
+  position: relative;
+}
+.smallMeal {
+  background-image: url("/circlered.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -8px;
+  bottom: -10px;
+  opacity: 0.2;
+  filter: blur(3px);
+}
+
+.smallMeal img{
+    opacity: 0.7;
+    filter: blur(2px);
+}
+
+.mediumMeal {
+  background-image: url("/circlered.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 100px;
+  filter: blur(3px);
+  bottom: 60px;
+  left: -160px;
+  position: absolute;
+  opacity: 0.2;
+  display: none;
+    z-index: 1;
+}
+.mediumMeal img{
+    filter: blur(13px);
+    opacity: 0.8;
+    z-index: -5;
+
+}
+.bigMeal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/circle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60%;
+  height: 60%;
+}
+.bigMeal img{
+}
+
+.input {
+  font-size: 19px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 27px;
+  border: 2px solid #edae01;
+  width: 70%;
+  max-width: 350px;
+  margin-top: 20px;
+  outline: 0;
+  background: transparent;
+  transition: all 0.3s ease-out;
+}
+.input:hover {
+  border: 2px solid #edae01;
+}
+.input:focus {
+  border: 2px solid  rgb(243, 88, 36);
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: relative;
+  left: -40px;
+  top: 14px;
+  cursor: pointer;
+}
+.input::placeholder {
+  font-size: 17px;
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .leftContainer {
+    order: 1;
+    width: 60%;
+  }
+  .rightContainer {
+    order: 2;
+    width: 40%;
+  }
+  .h1 {
+    font-size: 3.1rem;
+  }
+  .p {
+    width: 65%;
+  }
+  .mediumMeal {
+    display: block;
+  }
+  .bigMeal {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media screen and (min-width: 1229px) {
+  .mediumMeal {
+    opacity: 1;
+  }
+  .smallMeal {
+    opacity: 1;
+  }
+}

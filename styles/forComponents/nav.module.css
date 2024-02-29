@@ -1,0 +1,104 @@
+.nav {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  background: transparent;
+  border-bottom: 1px solid rgb(243, 88, 36);
+  padding: 0 50px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+}
+
+.links {
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.home {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.home span {
+  color: rgb(243, 88, 36);
+}
+
+.navContainer {
+  position: relative;
+}
+
+.menusContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  text-align: right;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  /* background: rgba(255, 255, 255, 0.705); */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: absolute;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: right;
+  right: -50px;
+  max-height: 80vh;
+  overflow-y: scroll;
+  top: 48px;
+  z-index: 33;
+  border-left: 1px solid rgb(243, 88, 36);
+  border-bottom: 1px solid rgb(243, 88, 36);
+}
+.list p {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 43px;
+  border-bottom: 1px solid grey;
+  transition: all 0.4s ease;
+}
+.list :last-child {
+  /* border: none; */
+}
+
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+/* .list::-webkit-scrollbar-track {
+  border: 1px solid rgb(172, 171, 171);
+} */
+
+/* Handle */
+.list::-webkit-scrollbar-thumb {
+  background: #7c796f6e;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.list::-webkit-scrollbar-thumb:hover {
+  background: #f8cd3e;
+}
+
+@media screen and (max-width: 900px) {
+  .nav {
+    padding: 10px 20px 5px;
+  }
+  .list {
+    right: -10px;
+  }
+  .home {
+    font-size: 17px;
+  }
+  .links {
+    font-size: 14px;
+  }
+}
